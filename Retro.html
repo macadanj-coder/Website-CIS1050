@@ -2,30 +2,78 @@
 
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="public/css/stylesheet.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Retro Music</title>
     </head>
-    <body>
-        <div className = "Hero">
+    <main class = "container">
+        <section class = "section" className = "Hero">
             <h1>Retro Music</h1>
             <h2>old mediums that are coming back</h2>
             <img src = "assets/viny_record.png" alt="cassette player">
 
-        </div>
-        <div className = "About">
+        </section>
+        <div class = "section" className = "About">
             <h1>About</h1>
             <p>
                 When digital music arrived, everyone thought it would mean the death to CDs. This hasn't really happened, and, ironically, there has been a ressurgence of vinyl and event cassete tapes. 
             </p>
         </div>
-        <div className = "Mediums">
+        <section class = "section" className = "Mediums">
             <h1>Mediums</h1>
-        </div>
-        <div className = "Medium 1 Article">
-            <h1>Medium 1</h1>
-            <p> Lorem ipsum </p>
+            <!-- Sample Format Card -->
+            <div class="format-card">
+                <img src="assets/cassette_player.png" alt="Sample Format Image">
+                <div class="format-details">
+                <h3>Compact Cassette</h3>
+                <p>A classic format known for its portability and analog warmth. Rediscover the joy of mixtapes!</p>
+                <p><a href="#" target="_blank">Learn More</a></p>
+                </div>
+            </div>
+            <!-- End Sample Format Card -->
+
+            <!-- Vinyl Format Card -->
+            <div class="format-card">
+                <img src="assets/viny_record.png" alt="Vinyl Format Image">
+                <div class="format-details">
+                <h3>Vinyl Record</h3>
+                <p>Experience the warmth and nostalgia of vinyl. Explore the rich sound of analog recordings.</p>
+                <p><a href="#" target="_blank">Learn More</a></p>
+                </div>
+            </div>
+
+            <!-- CD Format Card -->
+            <div class="format-card">
+                <img src="https://placekitten.com/300/200" alt="CD Format Image">
+                <div class="format-details">
+                <h3>Compact Disc (CD)</h3>
+                <p>Relive the era of digital audio with the compact disc. Crystal-clear sound and digital convenience.</p>
+                <p><a href="#" target="_blank">Learn More</a></p>
+                </div>
+            </div>
+            <!-- End Additional Format Cards -->
+        </section>
+        <!-- CD Article -->
+        <div class="format-card" className = "Medium 1 Article">
+            <div class = "format-details">
+                <h1>The Resilience of the Shiny Disc</h1>
+                <h2>A Nostalgic Journey</h2>
+                <p> Cast your mind back to the late 1980s—the era of neon scrunchies, Walkmans, and boomboxes. CDs burst onto the scene, promising pristine sound quality and a future free from the crackles and pops that plagued vinyl records. The compact disc was the epitome of modernity—an optical marvel encased in a reflective, plastic sheen.</p>
+                <h2>The Digital Revolution</h2>
+                <p>Fast forward to the early 2000s. The digital revolution was in full swing. MP3s, streaming services, and iPods took center stage. The once-ubiquitous CD towers in living rooms began to gather dust, and portable CD players morphed into relics. The convenience of digital music overshadowed the tactile pleasure of handling a physical disc.</p>
+                <h2>The Unexpected Comeback</h2>
+                <p>But wait! Just when we thought CDs were destined for the annals of music history, a plot twist unfolded. In 2021, the Recording Industry Association of America (RIAA) dropped a bombshell: CD sales had increased for the first time since 2004. Almost one billion units of this shiny medium were sold in 2000, but by 2021, that number had dwindled to a mere 46.6 million. However, the nearly 50% jump in sales from the previous year signaled a revival—a phoenix rising from the ashes.</p>
+                <h2>BTS and Beyoncé: Unlikely Champions</h2>
+                <p>Enter <b>BTS</b> and <b>Beyoncé</b>—global music icons who decided to embrace the seemingly retro trend. Both artists released their latest albums on CD, reigniting interest in this once-dismissed format. Suddenly, CDs were cool again. Tech review website Engadget even labeled the CD revival as "inevitable."</p>
+                <h2>Generational Divide</h2>
+                <p>Interestingly, it's not just nostalgic Boomers or Gen Xers driving this comeback. Surveys reveal that millennials are the ones fueling the resurgence of CDs. For them, the tactile experience of flipping through album booklets and placing a disc into a player holds a certain charm. It's a tangible connection to music—an antidote to the ephemeral nature of streaming playlists.</p>
+                <h2>The Sonic Experience</h2>
+                <p>Beyond nostalgia, audiophiles appreciate the CD's sound quality. Unlike compressed digital files, CDs offer lossless audio. The smooth, uninterrupted flow of tracks and the absence of buffering hiccups create an immersive listening experience. Perhaps it's the warmth of analog in a digital world that draws us back.</p>
+                <p>So, next time you spot a stack of CDs at a thrift store or dust off your old collection, remember: these shiny discs have danced through time, evolving from cutting-edge to classic. Long live the comeback of the compact disc! 🎶📀</p>
+            </div>
         </div>
         <div className = "Medium 2 Article">
             <h1>Medium 2</h1>
@@ -43,5 +91,5 @@
         </div>
 
 
-    </body>
+    </main>
 </html>
