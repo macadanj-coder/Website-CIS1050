@@ -2,12 +2,252 @@
 
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="public/css/stylesheet.css" type="text/css" media="all" />
+        <!-- <link rel="stylesheet" href="public/css/stylesheet.css" type="text/css" media="all" /> -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Retro Music</title>
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+            @import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
+
+            /* Reset some default styles for better consistency */
+
+            :root {
+            --primary-bg: #0c0c0c; /* Dark background */
+            --secondary-bg: #ff6600; /* Slightly lighter background */
+            --accent-color: #ffcc00; /* Yellow accent color */
+            --text-color: #ffffff; /* White text color */
+            --heading-color: #66ccff; /* Light blue heading color */
+            --card-bg: #333333; /* Dark card background */
+            --link-color: #ffcc00; /* Yellow link color */
+            --link-hover-color: #ffffff; /* White link hover color */
+            }
+
+
+            .chrome {
+            position: relative;
+            background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 4px #f5f5f5;
+            font-size: 200px;
+            font-family: 'Titillium Web', sans-serif;
+            font-style: italic;
+            margin: 0;
+            line-height: 1;
+            }
+
+            .chrome:before {
+            content: 'CHROME';
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+            background-position:-680px 0;
+            -webkit-background-clip: text;
+            -webkit-text-stroke: 0;
+            padding-right: 300px;
+            -webkit-animation-name: chrome_effect;
+            -webkit-animation-duration: 6s;
+            -webkit-animation-delay: 2s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+            }
+
+
+            .dreams {
+            position: absolute;
+            margin: 0px;
+            font-family: 'Mr Dafoe', cursive;
+            font-size: 160px;
+            color: #F975F7 ;
+            transform:rotate(-15deg);
+            -ms-transform:rotate(-15deg); /* IE 9 */
+            -webkit-transform:rotate(-15deg); /* Safari and Chrome */
+            margin-left: 400px;
+            margin-top: -120px;
+            -webkit-text-stroke: 1px #f008b7;
+            -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+            z-index: 20;
+            }
+
+            .windows .dreams {
+            -webkit-text-stroke: 4px #f008b7;
+            }
+
+
+            body, h1, h2, p, ul {
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                font-family: 'Orbitron', sans-serif;
+                background-color: var(--primary-bg);
+                color: var(--text-color);
+                line-height: 1.6;
+            }
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            
+            header {
+                color: var(--heading-color);
+                padding: 15px 0;
+            }
+            
+            header h1 {
+                font-size: 36px;
+            }
+            
+            main {
+                margin-top: 20px;
+            }
+            
+            .section {
+                margin-bottom: 40px;
+            }
+            
+            .section h2 {
+                color:   var(--heading-color); /* Light blue heading color */
+                border-bottom: 2px solid #2c3e50;
+                padding-bottom: 5px;
+                margin-bottom: 20px;
+            }
+            
+            .format-card {
+                background-color: var(--card-bg);
+                border: 1px solid #555;
+                border-radius: 8px;
+                overflow: hidden;
+                transition: box-shadow 0.3s;
+                margin-bottom: 20px;
+            }
+            
+            .format-card:hover {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .format-card img {
+                max-width: 100%;
+                height: 400px;
+            }
+            
+            .format-details {
+                padding: 20px;
+            }
+            
+            .format-details h3 {
+                color: var(--heading-color);
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            
+            .format-details p {
+                color: var(--text-color);
+                margin-bottom: 40px;
+            }
+            
+            .format-details a {
+                color: var(--link-color);
+                text-decoration: none;
+                font-weight: bold;
+            }
+            
+            .format-details a:hover {
+                color: var(--link-hover-color);
+                text-decoration: underline;
+            }
+            
+            .footer {
+                background-color: #34495e;
+                color: #ecf0f1;
+                text-align: center;
+                padding: 15px 0;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+            
+            /* Responsive styles */
+            @media (max-width: 768px) {
+                header h1 {
+                font-size: 28px;
+                }
+
+                img {
+                height: 300px;
+                }
+            
+                .format-details h3 {
+                font-size: 18px;
+                }
+            
+                .footer {
+                position: relative;
+                }
+                .chrome {
+                position: relative;
+                background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 4px #f5f5f5;
+                font-size: 100px;
+                font-family: 'Titillium Web', sans-serif;
+                font-style: italic;
+                margin: 0;
+                line-height: 1;
+                }
+                
+                .chrome:before {
+                content: 'RETRO';
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 10;
+                background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+                background-position:-680px 0;
+                -webkit-background-clip: text;
+                -webkit-text-stroke: 0;
+                padding-right: 300px;
+                -webkit-animation-name: chrome_effect;
+                -webkit-animation-duration: 6s;
+                -webkit-animation-delay: 2s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
+                }
+                
+                
+                .dreams {
+                position: absolute;
+                margin: 0px;
+                font-family: 'Mr Dafoe', cursive;
+                font-size: 80px;
+                color: #F975F7 ;
+                transform:rotate(-15deg);
+                -ms-transform:rotate(-15deg); /* IE 9 */
+                -webkit-transform:rotate(-15deg); /* Safari and Chrome */
+                margin-left: 200px;
+                margin-top: -80px;
+                -webkit-text-stroke: 1px #f008b7;
+                -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+                z-index: 20;
+                }
+                
+                .windows .dreams {
+                -webkit-text-stroke: 4px #f008b7;
+                }
+                
+            }
+            
+        </style>
     </head>
     <body>
         <main class = "container">
@@ -76,7 +316,9 @@
                 <div class="format-card" className = "CD Article">
                     <div class = "format-details">
                         <h1>The Resilience of the Shiny Disc</h1>
-                        
+                        <img src="assets/year-music-cd-phase-out-20171229.avif" alt="A person walks into an HMV store at a mall" height="10000px" />
+                        <p>A person enters an HMV store at a Dartmouth, N.S. mall on Feb. 24, 2017. Customer Adrian Doran, aware of the perceived obsolescence of compact discs, still finds plenty to love about them. (Andrew Vaughan/The Canadian Press)</p>
+                        <iframe src="//www.cbc.ca/i/phoenix/player/syndicate/?mediaId=2049134147679" width="640" height="360" frameborder="0" allowfullscreen></iframe>
                         <h2>A Nostalgic Journey</h2>
                         <p> Cast your mind back to the late 1980s—the era of neon scrunchies, Walkmans, and boomboxes. CDs burst onto the scene, promising pristine sound quality and a future free from the crackles and pops that plagued vinyl records. The compact disc was the epitome of modernity—an optical marvel encased in a reflective, plastic sheen.</p>
                         
@@ -87,6 +329,8 @@
                         <p>But wait! Just when we thought CDs were destined for the annals of music history, a plot twist unfolded. In 2021, the Recording Industry Association of America (RIAA) dropped a bombshell: CD sales had increased for the first time since 2004. Almost one billion units of this shiny medium were sold in 2000, but by 2021, that number had dwindled to a mere 46.6 million. However, the nearly 50% jump in sales from the previous year signaled a revival—a phoenix rising from the ashes.</p>
                         
                         <h2>BTS and Beyoncé: Unlikely Champions</h2>
+                        <img src="assets/albumcovertreatment31.webp" alt="Beyonce's &quot;RENAISSANCE&quot; Album Cover">
+                        <p>Cover to Beyoncé's Renaissance. This album scored 2022's second biggest album debut. (Carlijn Jacobs) </p>
                         <p>Enter <b>BTS</b> and <b>Beyoncé</b>—global music icons who decided to embrace the seemingly retro trend. Both artists released their latest albums on CD, reigniting interest in this once-dismissed format. Suddenly, CDs were cool again. Tech review website Engadget even labeled the CD revival as "inevitable."</p>
                         
                         <h2>Generational Divide</h2>
@@ -115,9 +359,14 @@
                 <div class="format-card" className = "Vinyl Article">
                     <div class = "format-details">
                         <h1>The Vinyl Revival</h1>
+                        <img src="assets/Feria_del_Disco_de_Coleccionista_en_Barcelona_(Abril_2016)_02.jpg" alt = "A record store in Barcelona">
+                        <p>A record store in Barcelona, 2016</p>
+
                         <p>The resurgence of vinyl records, also known as the vinyl revival, began around 2007 and has since gained momentum across the Western world and East Asia [2]. What factors have contributed to this unexpected resurgence?</p>
                         
                         <h2>A Shift in Listening Habitss</h2>
+                        <img src="assets/victrola.webp" alt = "Close up of a record needle on a record. Monochromatic photo.">
+                        <p>Victrola</p>
                         <p> Our music consumption habits have evolved dramatically. We hear music everywhere—while sipping coffee, driving, or working out. But amidst this constant background noise, something essential was lost: the art of **intentional listening**. Vinyl records offer a remedy. Unlike the instant gratification of streaming, playing a record demands patience. You carefully remove it from its sleeve, place it on the turntable, and set the stylus. Then, as the warm crackle fills the room, music becomes an activity, not just a backdrop [1].</p>
                         
                         <h2>The Tangible Experience</h2>
